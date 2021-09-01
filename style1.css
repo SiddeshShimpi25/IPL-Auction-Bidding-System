@@ -1,0 +1,62 @@
+Body {  
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight:bold;
+     background-image: url('images/cricket1.jpg');
+     background-size:100% 100%;
+     background-position: center;
+     opacity:0.8;
+     background-repeat: repeat;
+
+  }  
+  .container {  
+    text-align:center;   
+    padding: 35px;
+    height:1000 px;   
+    background-color: lightblue;  
+} 
+input[type=text], input[type=password] { 
+
+  font-family:Arial, Helvetica, sans-serif ;
+  width: 100%;   
+  margin: 8px 5px;  
+  padding: 6px 12px;   
+  display: inline-block;   
+  border: 2px solid red;   
+  box-sizing: border-box;   
+}  
+
+#form2 {   
+  border: 2px solid #f1f1f1;  
+margin:0 auto; 
+  width:27%;
+align-content:center;
+  height: 620.25px;
+
+}   
+
+button:hover {   
+  opacity: 0.7;
+  cursor: pointer;  
+}  
+
+#city{
+  margin: 8px 5px; 
+  width:100%;
+  cursor: pointer;
+}
+
+#signin1 {   
+  background-color:blue;   
+  width: 80%;  
+   color: BLACK;   
+   padding: 10px;   
+   margin: 5px 5px;   
+   border: none;   
+   cursor: pointer;
+   font-weight:bold;
+ }   
+ p{
+   font-size:60 px ;
+   font-weight:bold ;
+   font-family:Arial, Helvetica, sans-serif;
+ }

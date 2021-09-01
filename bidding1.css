@@ -1,0 +1,81 @@
+body{
+    background:linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    font-size:18px;
+    font-weight:bold;
+    font-family:Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+table, th, td {
+    border: 1px solid cyan;
+    color:cyan;
+    border-collapse: collapse;
+    border-width:4px;
+    padding: 10px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    font-family:'Roboto', sans-serif;
+   
+  }
+
+  table.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    height:400px;
+    width:250px;
+  }
+ 
+
+  #bal{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+  }
+  #base{
+      text-align:center;
+  }
+  #max{
+    text-align:center;
+}
+.bid{
+    text-align: center;
+}
+
+.bid #buy{
+    background: #0066A2;
+
+color: white;
+
+border-style: outset;
+
+border-color: #0066A2;
+
+height: 50px;
+
+width: 100px;
+
+font: bold 15px arial, sans-serif;
+
+text-shadow:none;
+}
+
+  #num{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+      margin: 0 auto;
+      margin-bottom:20px;
+      margin-top:20px;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 12%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+  }

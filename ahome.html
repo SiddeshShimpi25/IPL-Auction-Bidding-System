@@ -1,0 +1,115 @@
+<html>
+   <head></head> 
+<link rel="stylesheet" href="home1.css">
+
+<script>
+    function getUser() {
+      usrEmailID = document.getElementById("usrEmailID").value;
+      if (usrEmailID == ""){
+          return
+      }
+      var obj = {usrEmail: usrEmailID};
+      console.log(usrEmailID);
+      var userJSON = JSON.stringify(obj);
+    
+      var txt ="";
+      var xmlhttp=new XMLHttpRequest();
+      xmlhttp.onreadystatechange=function() {
+        if (this.readyState==4 && this.status==200) {
+            myObj = JSON.parse(this.responseText); 
+            console.log(myObj);
+            if (myObj.length === 0) { 
+                txt = "No details found"
+            }
+            else{
+            for (x in myObj) { 
+                txt += "Player name : "+ myObj[x].name + " <br>Base price: " +myObj[x].bprice +" <br>Total Runs: "+ myObj[x].runs + "<br>"+"Team name: "+myObj[x].tname+"<br>"; 
+            } 
+            }
+           document.getElementById("userDetail").innerHTML = txt; 
+          
+        }
+      }
+      xmlhttp.open("POST","ahome.php",true);
+      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
+      console.log(userJSON);
+      xmlhttp.send("user=" + userJSON ); 
+    }
+    </script>
+
+<body>
+    
+<div class="wrapper">
+  
+  <div class="top_navbar">
+    <div class="hamburger">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+     </div>
+    <div class="top_menu">
+      <div class="logo">
+         IPL Auction
+      </div>
+      <ul>
+        <li><a href="#">
+          <i class="fas fa-search"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-bell"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-user"></i>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">Your Details</span>
+          </a></li>
+       
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+          <span class="title">Players Acquired</span>
+          </a></li>
+        <li><a href="#" >
+          <span class="icon"><i class="fas fa-blog"></i></span>
+          <span class="title" onclick="window.location.href='About.html'">About Us</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-leaf"></i></span>
+          <span class="title" onclick="window.location.href='contact.html'">Contact Us</span>
+          </a></li>
+          <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-blog"></i></span>
+          <span class="title" >Player Details</span>
+          </a></li>
+          <li><a href="#">
+            <span class="icon"><i class="fas fa-leaf"></i></span>
+            <span class="title" onclick="window.location.href='sessiond.php'">Log Out</span>
+            </a></li>
+    </ul>
+  </div>
+ 
+  
+  
+  </div>
+</div>
+<div class='center'>
+
+    <p class="awesome">BIDDING IS OPEN FROM 9 AM TO 5PM!</p>
+  
+  </div>
+
+  <div >
+    <p class='btn2' id="userDetail"> </p> 
+    <input class='btn' type="text" placeholder="Enter player's id" name="usrEmailID" id ="usrEmailID" >
+  <input type="button" class='btn1' onclick="getUser()" value="Get Player Details"/>
+    <div>
+ 
+</body>
+</html>

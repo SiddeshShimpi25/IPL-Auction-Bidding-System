@@ -1,0 +1,93 @@
+Body {  
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight:bold;
+     background-image: url('images/cricket1.jpg');
+     background-size: 100%;
+     background-position: center;
+     opacity:0.8;
+     background-repeat: no-repeat;
+
+  } 
+
+
+  p{
+      text-align: center;
+  } 
+  #logo{
+    margin:300 px;
+     width: 250px;
+     align-content: center;
+     border-radius:10%;
+      height: 150px;
+       opacity:1;
+  }
+
+  #check{
+      cursor: pointer;
+      margin-bottom:7px ;
+      margin-right: auto;
+  }
+      #signin {   
+         background-color:blue;   
+         width: 100%;  
+          color: BLACK;
+        text-align: center;
+          padding: 10px;   
+          margin: 10px 5px;   
+          border: none;   
+          cursor: pointer;
+          font-weight:bold;
+        }   
+
+           #register {   
+            background-color:green;   
+            width: 100%;  
+             color: BLACK;   
+             padding: 10px;   
+             margin: 10px 5px;   
+             border: none;   
+             cursor: pointer;
+             font-weight:bold;
+       
+              }    
+   #form1 {   
+          border: 2px solid #f1f1f1;   
+          width:25%;
+          margin:0  auto;
+          height: 445.25px;
+      
+        
+      }   
+   input[type=text], input[type=password] { 
+
+          font-family:Arial, Helvetica, sans-serif ;
+          width: 100%;   
+          margin: 8px 5px;  
+          padding: 12px 20px;   
+          display: inline-block;   
+          border: 2px solid red;   
+          box-sizing: border-box;   
+      }  
+   button:hover {   
+          opacity: 0.7;
+          cursor: pointer;  
+      }  
+
+   
+
+       a.forgotpass {
+           text-align: centre;
+                    } 
+ 
+     .container { 
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight:bold;
+       
+          padding: 25px;   
+          background-color: lightblue;  
+      }  
+
+  
+
+
+

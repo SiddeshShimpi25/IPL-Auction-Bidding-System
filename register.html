@@ -1,0 +1,105 @@
+<html>
+<head>
+
+    <script type="text/javascript">  
+    
+
+      function validateform(){  
+      //  alert("in");    
+      var str=document.getElementById('n').value;
+      var aadhar=document.getElementById('a').value;  
+      var pass=document.getElementById('p').value;  
+      var conpass=document.getElementById('cp').value;  
+      var email=document.getElementById('em').value;
+      //exclude start and end white-space
+      str = str.replace(/(^\s*)|(\s*$)/gi,"");
+    
+      //convert 2 or more spaces to 1  
+      str = str.replace(/[ ]{2,}/gi," ");
+    
+      // exclude newline with a start spacing 
+      str = str.replace(/\n /,"\n");
+    
+      str = str.split(" ").length;
+      
+      //email validation
+      var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            //var address = document.getElementById[email].value;
+            if (reg.test(email) == false) 
+            {
+                alert('Invalid Email Address');
+                return (false);
+            }
+
+      if(aadhar.length!=12){  
+        alert("Enter valid aadhar card number.");  
+        return false;  
+      }  
+      else if(str>3){
+      alert("Enter 3 words only!");
+      return false;
+      }
+      else if (pass!=conpass){
+      alert("Password and confirm password should match!");
+      return false;
+      }
+else{
+      return true;
+}
+      }  
+  
+    </script> 
+
+ </head>
+ <body>
+<form onsubmit="return validateform();" action='register.php' id="form2" method="POST">
+  
+    <link rel="stylesheet" href="style1.css">
+ 
+    <div class="container">
+      <p>Sign up</p> 
+      <p>Enjoy making your team</p>
+      <hr style="border: 2px solid black;" />
+
+      <p>Owner Details:</p>
+      <input type="text" placeholder="Enter your full name" name="fname" id='n' pattern=".{3,40}" required>
+      <span class="error"> <?php echo $nameErr; ?> </span><br>
+      <input type="text" placeholder="Enter Username" name="uname" id="un" pattern=".{5,10}" required>
+       <span class="error"> <?php echo $uameErr; ?> </span><br>
+      <input type="email" name="email" placeholder="Enter Email Id" id="em" required> 
+      <span class="error"> <?php echo $emailErr; ?> </span>  
+      <br> 
+      <input type="text" placeholder="Enter valid aadhar no." id='a' name="aadhar" required><br>
+      <hr style="border: 2px solid black;" />
+      <p>Team Details:</p>
+      Choose city:
+      <br>
+      
+      <select name="selectcity" id="city">
+        <option value="Mumbai Indians">Mumbai Indians</option>
+        <option value="Chennai Super Kings">Chennai Super Kings</option>
+        <option value="Kings XI Punjab">Kings XI Punjab</option>
+        <option value="Delhi Capials">Delhi Capitals</option>
+        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+        <option value="Rajasthan Royals">Rajasthan Royals</option>
+        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+        <option value="Sunsrisers Hyderabad">Sunrisers Hyderabad</option>
+      </select><br>      
+
+      <input type="password" placeholder="Enter Password" name="password" id='p' required maxlength="15">
+      <input type="password" placeholder="Confirm Password" name="cpassword" id='cp' required maxlength="15">
+      <span class="error"> <?php echo $passErr; ?> </span><br>
+      <button type='submit' id='signin1' name='b1'>Register</button>
+  
+       <br>
+   
+    </div>
+
+  </form>
+  </body>
+  </html>
+
+
+
+
+  

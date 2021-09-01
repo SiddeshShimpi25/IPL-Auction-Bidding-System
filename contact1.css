@@ -1,0 +1,207 @@
+body{
+  background: rgba(0,0,0,0.5) url(images/back1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  background-blend-mode: overlay;
+}
+
+#mail{
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: cyan;
+}
+
+#contact{
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: cyan;
+}
+
+#loc{
+
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: cyan;
+}
+
+
+#heading{
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+color: cyan;
+}
+
+
+
+header{
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 80px;
+  background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
+}
+
+header .logo{
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  float: left;
+}
+
+header .menu{
+  float: right;
+  margin-top: 5px;
+
+}
+
+header ul li{
+  display: inline-block;
+}
+
+header ul li a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  margin: 0 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+header ul li a::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  background: cyan;
+  margin: 0 auto;
+  margin-top: 4px;
+  transition-delay: 0.1s;
+  opacity: 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+
+margin-left: 15px;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #mail {
+      text-align:left;
+  }
+#loc{
+  text-align:left;
+}
+  #contact {
+      text-align:left;
+  }
+  #map{
+    align-content:left;
+  }
+  #heading{
+    text-align:left;
+}
+
+}
+
+
+
+/* Smartphones (landscape) ----------- 
+@media only screen and (min-width: 321px) {
+  #mail {
+    text-align: left;
+     }
+   #loc{
+     text-align:left;
+   }
+     #contact {
+        text-align:left;
+     }
+     #map{
+      align-content:left;
+     }
+     #heading{
+      text-align:left;
+  }
+   }
+*/
+  
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  #mail {
+      text-align: left;
+       }
+     #loc{
+       text-align:left;
+     }
+       #contact {
+          text-align:left;
+       }
+       #map{
+        align-content:left;
+       }
+       #heading{
+        text-align:left;
+    }
+     }
+
+     /* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+#mail {
+  text-align:center;
+ 
+   }
+ #loc{
+   text-align:center;
+ }
+   #contact {
+      text-align:center;
+   }
+   #map{
+     align-content:center;
+   }
+   #heading{
+    text-align:center;
+}
+        
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  #mail {
+      text-align:center;
+     
+       }
+     #loc{
+       text-align:center;
+     }
+       #contact {
+          text-align:center;
+       }
+       #map{
+         align-content:center;
+       }
+       #heading{
+        text-align:center;
+    }
+    body {
+      background-color:darkblue;
+    }
+  }
+     }

@@ -1,0 +1,35 @@
+     <html>
+     <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.html">
+    <link rel="stylesheet" href="home.html">
+  </head>
+  <body>
+    <a href="index.html" style="text-decoration:none;"> <img src='images/hlogo.png' alt='logo' id='logo'></a> 
+  </body>
+<form id="form1"  action="login1.php" method="POST">
+  
+    <div class="container">
+    
+      <p>Login</p>
+  
+   
+      <label>Username: </label><br>
+      <input type="text" placeholder="Enter Username" name="username" required>
+      <span class="error"> <?php echo $nameErr; ?> </span> <br>
+      <label>Password : </label>
+      <span class="error"> <?php echo $nameErr; ?> </span><br>
+      <input type="password" placeholder="Enter Password" name="password" required maxlength="15"><br>
+  
+      <input type="checkbox" id=check checked="checked"> Remember me <br>
+      <button type='submit' id='signin' name="submit">Login</button>
+  
+       <br>
+       <a href="dfd" class='forgotpass'> Forgot password? </a><br>
+       <hr style="border: 1px solid black;" />
+      <input id="register" type="button" value="Register" onclick="window.location.href='register.html'"> 
+      <input id="register" type="button" value="Admin Login" onclick="window.location.href='alogin.html'"> 
+      </div>
+  </form>
+ 
+  </html>
